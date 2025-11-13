@@ -1,0 +1,16 @@
+D:\webAPI\WebApiShop\Repositories\bin\Debug\net9.0\Repositories.deps.json
+D:\webAPI\WebApiShop\Repositories\bin\Debug\net9.0\Repositories.dll
+D:\webAPI\WebApiShop\Repositories\bin\Debug\net9.0\Repositories.pdb
+D:\webAPI\WebApiShop\Repositories\bin\Debug\net9.0\Entities.dll
+D:\webAPI\WebApiShop\Repositories\bin\Debug\net9.0\Entities.pdb
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.csproj.AssemblyReference.cache
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.AssemblyInfoInputs.cache
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.AssemblyInfo.cs
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.csproj.CoreCompileInputs.cache
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.sourcelink.json
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Reposito.787EC4B2.Up2Date
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.dll
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\refint\Repositories.dll
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\Repositories.pdb
+D:\webAPI\WebApiShop\Repositories\obj\Debug\net9.0\ref\Repositories.dll

@@ -1,87 +1,51 @@
-﻿const extrctDataFromInputValid = () => {
+﻿
+const extrctDataFromInputUser = () => {
     const userName = document.querySelector("#userName").value
-    if (userName.indexOf("@") < 1 && userName) {
-        alert("השם חייב להכיל @ באמצע")
-        return ""
-    }
     const firstName = document.querySelector("#firstName").value
     const lastName = document.querySelector("#lastName").value
     const password = document.querySelector("#password").value
-    if (password.length < 4 && password) {
-        alert("אורך הסיסמא קצר מידי")
-        return ""
-    }
-    if (!userName || !firstName || !lastName || !password) {
-        alert("לפחות אחד מהנתונים חסרים")
-        return ""
-    }    
-    let usersArrayExist = JSON.parse(sessionStorage.getItem("Users"))
-    if (usersArrayExist===null) {
-        sessionStorage.setItem("Users", JSON.stringify([]))
-        usersArrayExist = JSON.parse(sessionStorage.getItem("Users"))
-    }
-    const isExist = !!usersArrayExist.find(user => user.userName ===userName && user.password ===password)
-    if (isExist === true) {
-        alert("שם משתמש וסיסמא תפוסים בחר שם משתמש או סיסמא שונים")
-        return
-    }
-    return { userName, firstName, lastName, password }
+    const id=1
+    return {id, userName, firstName, lastName, password }
 }
 
-const createObjUser = (upDateValues) => {
-    const id = 1
-    const userName = upDateValues.userName
-    const firstName = upDateValues.firstName
-    const lastName = upDateValues.lastName
-    const password = upDateValues.password
-    return { id, userName, firstName, lastName, password }
+const extrctDataFromInputLogIn = () => {
+    const userName = document.querySelector("#username").value
+    const password = document.querySelector("#pasword").value
+    const   id = 1,firstName= "aaa", lastName ="aaa"
+    return { id, userName, firstName , lastName , password }
 }
 
-const updateStorage = (fullUser) => {
-    sessionStorage.setItem("currentUser", JSON.stringify(fullUser))
-}
-
-async function postResponse() {
-    const dateValues = extrctDataFromInputValid()
-    if (dateValues === "") {
-        return
-    }
-    const newUser = createObjUser(dateValues)
-    try {
-        const response = await fetch(
-            "https://localhost:44362/api/Users",
-            {
+async function registIn() {
+    const check = await checkPassword()
+    if (check === 0)
+        alert("הסיסמא חלשה מידי אנא בדוק חוזק סיסמא")
+    else {
+        const newUser = extrctDataFromInputUser()
+        try {
+            const response = await fetch(
+                "https://localhost:44362/api/Users", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newUser)
             }
-        )
-    if (!response.ok) {
-        throw new Error(`HTTP error! status ${response.status}`);
+            )
+            if (!response.ok) {
+                throw new Error(`HTTP error! status ${response.status}`);
+            }
+            else {
+                alert("המשתמש נרשם בהצלחה")
+                const newUserFull = await response.json()
+            }
         }
-    else {
-        alert("המשתמש נרשם בהצלחה")
-        const newUserFull = await response.json()
-        const usersArray = JSON.parse(sessionStorage.getItem("Users"))
-        usersArray.push(newUserFull)
-        sessionStorage.setItem("Users", JSON.stringify(usersArray))
-        }
+        catch (e) { alert(e) }
     }
-     catch (e) { alert(e) }
 }
 
 async function logIn() {
-    const userName = document.querySelector("#username").value
-    const password = document.querySelector("#pasword").value
-    if (!userName ||!password) {
-        alert("לפחות אחד מהנתונים חסרים")
-        return 
-    }
-    const existUser = { userName, password }
+    const existUser = extrctDataFromInputLogIn()
     try {
         const response = await fetch(
-            "https://localhost:44362/api/Users/login",
-            {
+            "https://localhost:44362/api/Users/login",{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(existUser)
@@ -93,11 +57,66 @@ async function logIn() {
         }
         else {
             const fullUser = await response.json()
-            updateStorage(fullUser)
+            sessionStorage.setItem("currentUser", JSON.stringify(fullUser))
             window.location.href = "page2.html"
         }
     }
     catch (e) { alert(e) }
+}
+async function checkPassword() {
+    const password = document.querySelector("#password").value
+    const userPassword ={ password }
+    try {
+        const response = await fetch(
+                "https://localhost:44362/api/UsersPassword", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userPassword)
+            }
+        )
+        if (!response.ok) {
+            throw new Error(`HTTP error! status ${response.status}`);
+        }
+        else {
+            const a = await response.json()
+            if (Number(a) < 2) {
+                const p="1"
+                const userPassword = {p}
+                try {
+                    const response = await fetch(
+                        "https://localhost:44362/api/UsersPassword", {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(userPassword)
+                    }
+                    )
+                    if (!response.ok) 
+                        throw new Error(`HTTP error! status ${response.status}`);
+                }
+                catch (e) {
+                    alert(e)
+                    return 0
+                }
+            }
+            else {
+                const bar = document.querySelector(".bar")  
+                bar.innerHTML = "";
+                bar.style.display="flex"
+                const array = []
+                for (let i = 0; i < a; i++) {  
+                    const step = document.createElement("div")
+                    step.className ="stage"
+                    array.push(step)
+                }
+                array.forEach(step => bar.appendChild(step));
+
+            }
+        }
+    }
+    catch (e) {
+        alert(e)
+        return 0
+    }
 }
 
 
