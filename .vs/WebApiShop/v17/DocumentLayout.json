@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\webAPI\\WebApiShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{DAAB1C30-6048-49E7-AC40-2F4545492A90}|Repositories\\Repositories.csproj|d:\\webapi\\webapishop\\repositories\\repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DAAB1C30-6048-49E7-AC40-2F4545492A90}|Repositories\\Repositories.csproj|solutionrelative:repositories\\repositories.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -15,52 +15,20 @@
       "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\wwwroot\\page2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\wwwroot\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\wwwroot\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\wwwroot\\page2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\wwwroot\\page2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5375257-80D4-4607-AAEF-BF6914606ACF}|Entities\\Entities.csproj|d:\\webapi\\webapishop\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5375257-80D4-4607-AAEF-BF6914606ACF}|Entities\\Entities.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8713E766-D992-4C3F-B5A3-FF7FD8F212AC}|Services\\Services.csproj|d:\\webapi\\webapishop\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8713E766-D992-4C3F-B5A3-FF7FD8F212AC}|Services\\Services.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\controllers\\userspasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\controllers\\userspasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8713E766-D992-4C3F-B5A3-FF7FD8F212AC}|Services\\Services.csproj|d:\\webapi\\webapishop\\services\\userpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8713E766-D992-4C3F-B5A3-FF7FD8F212AC}|Services\\Services.csproj|solutionrelative:services\\userpasswordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\controllers\\userspasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\controllers\\userspasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5375257-80D4-4607-AAEF-BF6914606ACF}|Entities\\Entities.csproj|d:\\webapi\\webapishop\\entities\\userpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5375257-80D4-4607-AAEF-BF6914606ACF}|Entities\\Entities.csproj|solutionrelative:entities\\userpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAAB1C30-6048-49E7-AC40-2F4545492A90}|Repositories\\Repositories.csproj|d:\\webapi\\webapishop\\repositories\\userpasswordripository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAAB1C30-6048-49E7-AC40-2F4545492A90}|Repositories\\Repositories.csproj|solutionrelative:repositories\\userpasswordripository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAAB1C30-6048-49E7-AC40-2F4545492A90}|Repositories\\Repositories.csproj|d:\\webapi\\webapishop\\repositories\\userripository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAAB1C30-6048-49E7-AC40-2F4545492A90}|Repositories\\Repositories.csproj|solutionrelative:repositories\\userripository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|d:\\webapi\\webapishop\\webapishop\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
-      "RelativeMoniker": "D:0:0:{51EEA669-7255-4272-91D1-1DC27654E101}|WebApiShop\\WebApiShop.csproj|solutionrelative:webapishop\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,8 +38,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserPasswordService.cs",
+              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Services\\UserPasswordService.cs",
+              "RelativeDocumentMoniker": "Services\\UserPasswordService.cs",
+              "ToolTip": "D:\\webAPI\\WebApiShop\\Services\\UserPasswordService.cs",
+              "RelativeToolTip": "Services\\UserPasswordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T17:10:09.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApiShop\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApiShop\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T17:06:36.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersPasswordController.cs",
+              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersPasswordController.cs",
+              "RelativeDocumentMoniker": "WebApiShop\\Controllers\\UsersPasswordController.cs",
+              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersPasswordController.cs",
+              "RelativeToolTip": "WebApiShop\\Controllers\\UsersPasswordController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T17:05:55.625Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -80,107 +87,10 @@
               "RelativeDocumentMoniker": "WebApiShop\\wwwroot\\script.js",
               "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\wwwroot\\script.js",
               "RelativeToolTip": "WebApiShop\\wwwroot\\script.js",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowBMAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-09-10T12:38:43.815Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T18:22:59.399Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\User.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\Entities\\User.cs",
-              "RelativeToolTip": "Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T18:12:32.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserRipository.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Repositories\\UserRipository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserRipository.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\Repositories\\UserRipository.cs",
-              "RelativeToolTip": "Repositories\\UserRipository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T18:18:33.745Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserPassword.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Entities\\UserPassword.cs",
-              "RelativeDocumentMoniker": "Entities\\UserPassword.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\Entities\\UserPassword.cs",
-              "RelativeToolTip": "Entities\\UserPassword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T19:11:43.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserPasswordService.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Services\\UserPasswordService.cs",
-              "RelativeDocumentMoniker": "Services\\UserPasswordService.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\Services\\UserPasswordService.cs",
-              "RelativeToolTip": "Services\\UserPasswordService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T19:33:38.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "home.html",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\wwwroot\\home.html",
-              "RelativeDocumentMoniker": "WebApiShop\\wwwroot\\home.html",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\wwwroot\\home.html",
-              "RelativeToolTip": "WebApiShop\\wwwroot\\home.html",
-              "ViewState": "AgIAACgAAAAAAAAAAAAvwEAAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-09-10T12:38:21.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebApiShop\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "WebApiShop\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAArwCYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-05T07:12:55.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "page2.html",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\wwwroot\\page2.html",
-              "RelativeDocumentMoniker": "WebApiShop\\wwwroot\\page2.html",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\wwwroot\\page2.html",
-              "RelativeToolTip": "WebApiShop\\wwwroot\\page2.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-10-23T19:04:24.333Z"
+              "WhenOpened": "2025-11-15T17:05:18.425Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -190,69 +100,36 @@
               "RelativeDocumentMoniker": "WebApiShop\\wwwroot\\page2.js",
               "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\wwwroot\\page2.js",
               "RelativeToolTip": "WebApiShop\\wwwroot\\page2.js",
-              "ViewState": "AgIAAEwAAAAAAAAAAADwv18AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T21:16:05.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "users.txt",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\users.txt",
-              "RelativeDocumentMoniker": "WebApiShop\\users.txt",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\users.txt",
-              "RelativeToolTip": "WebApiShop\\users.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-07T12:35:03.669Z",
+              "WhenOpened": "2025-11-15T17:05:08.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UsersPasswordController.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersPasswordController.cs",
-              "RelativeDocumentMoniker": "WebApiShop\\Controllers\\UsersPasswordController.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\Controllers\\UsersPasswordController.cs",
-              "RelativeToolTip": "WebApiShop\\Controllers\\UsersPasswordController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADgvyMAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UserRipository.cs",
+              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Repositories\\UserRipository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRipository.cs",
+              "ToolTip": "D:\\webAPI\\WebApiShop\\Repositories\\UserRipository.cs",
+              "RelativeToolTip": "Repositories\\UserRipository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T19:54:18.576Z"
+              "WhenOpened": "2025-11-14T06:46:47.926Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserPasswordRipository.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Repositories\\UserPasswordRipository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserPasswordRipository.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\Repositories\\UserPasswordRipository.cs",
-              "RelativeToolTip": "Repositories\\UserPasswordRipository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T19:27:37.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\Program.cs",
-              "RelativeDocumentMoniker": "WebApiShop\\Program.cs",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\Program.cs",
-              "RelativeToolTip": "WebApiShop\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T23:30:03.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": ".editorconfig",
-              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\WebApiShop\\.editorconfig",
-              "RelativeDocumentMoniker": "WebApiShop\\.editorconfig",
-              "ToolTip": "D:\\webAPI\\WebApiShop\\WebApiShop\\.editorconfig",
-              "RelativeToolTip": "WebApiShop\\.editorconfig",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-29T16:39:06.999Z"
+              "DocumentIndex": 0,
+              "Title": "Repositories.csproj",
+              "DocumentMoniker": "D:\\webAPI\\WebApiShop\\Repositories\\Repositories.csproj",
+              "RelativeDocumentMoniker": "Repositories\\Repositories.csproj",
+              "ToolTip": "D:\\webAPI\\WebApiShop\\Repositories\\Repositories.csproj",
+              "RelativeToolTip": "Repositories\\Repositories.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-14T06:43:28.515Z",
+              "EditorCaption": ""
             }
           ]
         }

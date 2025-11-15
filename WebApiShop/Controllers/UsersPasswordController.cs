@@ -31,9 +31,12 @@ namespace WebApiShop.Controllers
 
         // POST api/<UsersPasswordController>
         [HttpPost]
-        public int checkPassword([FromBody] UserPassword password)
+        public ActionResult<int>checkPassword([FromBody] UserPassword password)
         {
-            return userPasswordService.checkPassword(password.Password);
+            int score = userPasswordService.checkPassword(password.Password);
+            if (score > 2)
+                return Ok(score);
+            return BadRequest();
         }
 
         // PUT api/<UsersPasswordController>/5

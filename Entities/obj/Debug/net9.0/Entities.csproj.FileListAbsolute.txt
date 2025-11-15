@@ -10,3 +10,15 @@ D:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.dll
 D:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\refint\Entities.dll
 D:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.pdb
 D:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\ref\Entities.dll
+F:\webAPI\WebApiShop\Entities\bin\Debug\net9.0\Entities.deps.json
+F:\webAPI\WebApiShop\Entities\bin\Debug\net9.0\Entities.dll
+F:\webAPI\WebApiShop\Entities\bin\Debug\net9.0\Entities.pdb
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.AssemblyInfoInputs.cache
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.AssemblyInfo.cs
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.csproj.CoreCompileInputs.cache
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.sourcelink.json
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.dll
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\refint\Entities.dll
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\Entities.pdb
+F:\webAPI\WebApiShop\Entities\obj\Debug\net9.0\ref\Entities.dll
