@@ -13,13 +13,12 @@ namespace WebApiShop.Controllers
     [ApiController]
     public class UsersPasswordController : ControllerBase
     {
-        IUserPasswordService _userPasswordService;
+        private readonly IUserPasswordService _userPasswordService;
 
-        public UsersPasswordController(IUserPasswordService userPassword)
+        public UsersPasswordController(IUserPasswordService userPasswordService)
         {
-            _userPasswordService=userPassword;
+            _userPasswordService = userPasswordService;
         }
-
         // GET: api/<UsersPasswordController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -32,19 +31,18 @@ namespace WebApiShop.Controllers
         public string Get(UserPassword password)
         {
             return "value";
-             
         }
-
+        
         // POST api/<UsersPasswordController>
         [HttpPost]
-        public ActionResult<int>CheckPassword([FromBody] UserPassword password)
+        public ActionResult<int> CheckPassword([FromBody] UserPassword password)
         {
             int score = _userPasswordService.CheckPassword(password.Password);
             if (score > 1)
                 return Ok(score);
-            return BadRequest();
+            return BadRequest("Password is not strong enough");
         }
-
+        
         // PUT api/<UsersPasswordController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
