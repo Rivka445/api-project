@@ -8,7 +8,6 @@ namespace Repositories
 {
     public class UserPasswordRipository : IUserPasswordRipository
     {
-
         public int CheckPassword(UserPassword password)
         {
             return 0;

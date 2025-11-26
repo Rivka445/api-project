@@ -90,6 +90,10 @@ C:\Users\user1\Desktop\ריקי\שנה ב'\python\python4ml-main\webAPI\WebApiSh
 C:\Users\user1\Desktop\ריקי\שנה ב'\python\python4ml-main\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
 C:\Users\user1\Desktop\ריקי\שנה ב'\python\python4ml-main\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
 C:\Users\user1\Desktop\ריקי\שנה ב'\python\python4ml-main\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
+<<<<<<< HEAD
+=======
+D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.sourcelink.json
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Entities.dll
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Repositories.dll
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Services.dll
@@ -152,10 +156,18 @@ E:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Repositories.pdb
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.AssemblyReference.cache
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.sourcelink.json
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.csproj.Up2Date
+<<<<<<< HEAD
+=======
+D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\1aa4p0wbdf-12z4c8z9hz.gz
+D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\co1eup8ul9-naeexad5xs.gz
+D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-e4f2vzkylc.gz
+D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\u9gna8e2di-16w8k1ouib.gz
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-e4f2vzkylc.gz
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\u9gna8e2di-16w8k1ouib.gz
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\1aa4p0wbdf-12z4c8z9hz.gz
 E:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\co1eup8ul9-naeexad5xs.gz
+<<<<<<< HEAD
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-bgnemu9fba.gz
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\u9gna8e2di-yp15rvf0wx.gz
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\1aa4p0wbdf-378rf7u0kc.gz
@@ -292,3 +304,5 @@ D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Works
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\co1eup8ul9-lswmok6wnh.gz
+=======
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c

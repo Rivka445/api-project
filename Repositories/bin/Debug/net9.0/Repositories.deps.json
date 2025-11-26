@@ -8,15 +8,20 @@
     ".NETCoreApp,Version=v9.0": {
       "Repositories/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.11"
+=======
+          "Entities": "1.0.0"
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
         },
         "runtime": {
           "Repositories.dll": {}
         }
       },
+<<<<<<< HEAD
       "Azure.Core/1.38.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "7.0.0",
@@ -1009,6 +1014,8 @@
           }
         }
       },
+=======
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
       "Entities/1.0.0": {
         "runtime": {
           "Entities.dll": {
@@ -1025,6 +1032,7 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< HEAD
     "Azure.Core/1.38.0": {
       "type": "package",
       "serviceable": true,
@@ -1578,6 +1586,8 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
+=======
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
     "Entities/1.0.0": {
       "type": "project",
       "serviceable": false,

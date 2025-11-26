@@ -64,7 +64,21 @@
         "IsRequired": true
       }
     ],
+<<<<<<< HEAD
     "ReturnTypes": []
+=======
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
   },
   {
     "ContainingType": "WebApiShop.Controllers.UsersController",
@@ -117,15 +131,30 @@
   {
     "ContainingType": "WebApiShop.Controllers.UsersController",
     "Method": "LogIn",
+<<<<<<< HEAD
     "RelativePath": "api/Users/login",
+=======
+    "RelativePath": "api/Users/{login}",
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+<<<<<<< HEAD
         "Name": "existingUser",
         "Type": "Entities.User",
         "IsRequired": true
+=======
+        "Name": "existUser",
+        "Type": "Entities.User",
+        "IsRequired": true
+      },
+      {
+        "Name": "login",
+        "Type": "",
+        "IsRequired": true
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
       }
     ],
     "ReturnTypes": [
@@ -216,5 +245,57 @@
         "StatusCode": 200
       }
     ]
+<<<<<<< HEAD
+=======
+  },
+  {
+    "ContainingType": "WebApiShop.Controllers.UsersPasswordController",
+    "Method": "Put",
+    "RelativePath": "api/UsersPassword/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApiShop.Controllers.UsersPasswordController",
+    "Method": "Delete",
+    "RelativePath": "api/UsersPassword/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+>>>>>>> 04d96632f8f1392e48ac2d8e158e6ad09cabbf8c
   }
 ]
