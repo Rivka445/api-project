@@ -48,7 +48,7 @@ namespace WebApiShop.Controllers
             if(passwordScore < 2)
                 return BadRequest("Password is not strong enough");
             User user = await _userService.AddUser(newUser);
-            return CreatedAtAction(nameof(Get), new { Id = user.Id }, user);
+            return CreatedAtAction(nameof(Get), new { Id = user.UserId }, user);
         }
 
         // POST api/<UsersController>

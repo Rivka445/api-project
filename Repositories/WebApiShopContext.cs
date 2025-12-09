@@ -38,9 +38,7 @@ public partial class WebApiShopContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.Property(e => e.OrderId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("order_id");
+            entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.OrderDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasAnnotation("Relational:DefaultConstraintName", "DF_Orders_order_date")
@@ -48,8 +46,8 @@ public partial class WebApiShopContext : DbContext
             entity.Property(e => e.OrderSum).HasColumnName("order_sum");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
-            entity.HasOne(d => d.OrderNavigation).WithOne(p => p.Order)
-                .HasForeignKey<Order>(d => d.OrderId)
+            entity.HasOne(d => d.User).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Orders_Users");
         });
@@ -101,13 +99,15 @@ public partial class WebApiShopContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(100)
-                .IsFixedLength();
+                .IsFixedLength()
+                .HasColumnName("first_name");
             entity.Property(e => e.LastName)
                 .HasMaxLength(100)
-                .IsFixedLength();
+                .IsFixedLength()
+                .HasColumnName("last_name");
             entity.Property(e => e.Password)
                 .IsRequired()
                 .HasMaxLength(100)
@@ -115,7 +115,8 @@ public partial class WebApiShopContext : DbContext
             entity.Property(e => e.UserName)
                 .IsRequired()
                 .HasMaxLength(100)
-                .IsFixedLength();
+                .IsFixedLength()
+                .HasColumnName("user_name");
         });
 
         OnModelCreatingPartial(modelBuilder);

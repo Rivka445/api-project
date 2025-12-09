@@ -19,9 +19,12 @@ namespace WebApiShop.Controllers
         }
         // GET: api/<CategoriesController>
         [HttpGet]
-        public async Task<IEnumerable<Category>> Get()
+        public async Task<ActionResult<IEnumerable<Category>>> Get()
         {
-            return await _categoryService.GetCategories();
+            List<Category> categories= await _categoryService.GetCategories();
+            if (categories.Count() == 0)
+                return NoContent();
+            return Ok(categories);
         }
 
         // GET api/<CategoriesController>/5

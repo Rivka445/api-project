@@ -4,15 +4,15 @@ const extrctDataFromInputUser = () => {
     const firstName = document.querySelector("#firstName").value
     const lastName = document.querySelector("#lastName").value
     const password = document.querySelector("#password").value
-    const id=0
-    return {id, userName, firstName, lastName, password }
+    const UserId =0
+    return { UserId, userName, firstName, lastName, password }
 }
 
 const extrctDataFromInputLogIn = () => {
     const userName = document.querySelector("#username").value
     const password = document.querySelector("#pasword").value
-    const id = 1,firstName= "aaa", lastName ="aaa"
-    return { id, userName, firstName , lastName , password }
+    const UserId = 1,firstName= "aaa", lastName ="aaa"
+    return { UserId, userName, firstName , lastName , password }
 }
 
 async function registIn() {

@@ -88,7 +88,6 @@ D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\refint\WebApiShop.dll
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.pdb
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.genruntimeconfig.cache
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\ref\WebApiShop.dll
-D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\co1eup8ul9-01iy23hzc1.gz
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\dsl5nreg3f-o5qwdmn5g8.gz
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\u9gna8e2di-oo8dt0wgve.gz
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
@@ -97,3 +96,4 @@ D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cs
+D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\co1eup8ul9-ceob9vt2tk.gz
