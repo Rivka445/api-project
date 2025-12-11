@@ -97,3 +97,5 @@ D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerG
 D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\WebApiShop.MvcApplicationPartsAssemblyInfo.cs
 D:\webAPI\WebApiShop\WebApiShop\obj\Debug\net9.0\compressed\co1eup8ul9-ceob9vt2tk.gz
+D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\AutoMapper.dll
+D:\webAPI\WebApiShop\WebApiShop\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

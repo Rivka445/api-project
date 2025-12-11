@@ -207,6 +207,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "zxcvbn-core": {
               "target": "Package",
               "version": "[7.0.92, )"

@@ -24,6 +24,8 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddDbContext<WebApiShopContext>(options => options.UseSqlServer
 ("Data Source=DESKTOP-1VUANBN; Initial Catalog=WebApiShop;Integrated Security=True;Trust Server Certificate=True;Pooling=False"));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddControllers();
 
 builder.Services.AddOpenApi(); 

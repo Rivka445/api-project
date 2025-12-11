@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities;
+using Entities.DTO;
+using Microsoft.AspNetCore.Mvc;
 using Repositories;
-using Entities;
 using Services;
 using System.Collections.Generic;
 using System.Text.Json;
@@ -24,9 +25,9 @@ namespace WebApiShop.Controllers
 
         // GET: api/<UsersController>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> Get()
+        public async Task<ActionResult<IEnumerable<UserDTO>>> Get()
         {
-            List<User> users=await _userService.GetUsers();
+            List<UserDTO> users = await _userService.GetUsers();
             if(users.Count()==0)
                 return NoContent();
             return Ok(users);
@@ -34,28 +35,28 @@ namespace WebApiShop.Controllers
 
         // GET api/<UsersController>/5
         [HttpGet("{Id}")]
-        public async Task<ActionResult<User>> GetId(int id)
+        public async Task<ActionResult<UserDTO>> GetId(int id)
         {
-            User user = await _userService.GetUserById(id);
+            UserDTO user = await _userService.GetUserById(id);
             return user != null ? Ok(user) : NotFound();
         }
 
         // POST api/<UsersController>
         [HttpPost]
-        public async Task<ActionResult<User>> AddUser([FromBody] User newUser)
+        public async Task<ActionResult<UserDTO>> AddUser([FromBody] User newUser)
         {
             int passwordScore = _userPasswordService.CheckPassword(newUser.Password);
             if(passwordScore < 2)
                 return BadRequest("Password is not strong enough");
-            User user = await _userService.AddUser(newUser);
+            UserDTO user = await _userService.AddUser(newUser);
             return CreatedAtAction(nameof(Get), new { Id = user.UserId }, user);
         }
 
         // POST api/<UsersController>
         [HttpPost("login")]
-        public async Task<ActionResult<User>> LogIn([FromBody] User existingUser)
+        public async Task<ActionResult<UserLoginDTO>> LogIn([FromBody] User existingUser)
         {
-            User user = await _userService.LogIn(existingUser);
+            UserLoginDTO user = await _userService.LogIn(existingUser);
             if(user == null)
                 return NotFound(existingUser);
             return Ok(user);
@@ -75,6 +76,7 @@ namespace WebApiShop.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+
         }
     }
 }

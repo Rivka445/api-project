@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Services;
+using Entities.DTO;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,17 +26,17 @@ namespace WebApiShop.Controllers
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetId(int id)
+        public async Task<ActionResult<OrderDTO>> GetId(int id)
         {
-            Order order = await _orderService.GetOrderById(id);
+            OrderDTO order = await _orderService.GetOrderById(id);
             return order!= null ? Ok(order) : NotFound();
         }
 
         // POST api/<OrdersController>
         [HttpPost]
-        public async Task<ActionResult<Order>> Post([FromBody] Order order)
+        public async Task<ActionResult<OrderDTO>> Post([FromBody] Order order)
         {
-            Order orderr = await _orderService.AddOrder(order);
+            OrderDTO orderr = await _orderService.AddOrder(order);
             return CreatedAtAction(nameof(Get), new { Id = orderr.OrderId }, orderr);
         }
 

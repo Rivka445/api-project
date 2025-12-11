@@ -1,24 +1,29 @@
-﻿using System;
+﻿using AutoMapper;
+using Entities;
+using Entities.DTO;
+using Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entities;
-using Repositories;
 
 namespace Services
 {
     public class CategoryService : ICategoryService
     {
         private readonly ICategoryRepository _categoryRepository;
-
-        public CategoryService(ICategoryRepository categoryRepository)
+        private readonly IMapper _mapper;       
+        public CategoryService(ICategoryRepository categoryRepository, IMapper mapper)
         {
+            _mapper = mapper;
             _categoryRepository = categoryRepository;
         }
-        public async Task<List<Category>> GetCategories()
+        public async Task<List<CategoryDTO>> GetCategories()
         {
-            return await _categoryRepository.GetCategories();
+            List<Category> categories = await _categoryRepository.GetCategories();
+            List<CategoryDTO> categoriesDTO = _mapper.Map<List<Category>, List<CategoryDTO>>(categories);
+            return categoriesDTO;    
         }
     }
 }

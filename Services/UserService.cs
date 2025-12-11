@@ -1,31 +1,42 @@
-﻿using Entities;
+﻿using AutoMapper;
+using Entities;
+using Entities.DTO;
 using Repositories;
 namespace Services
 {
     public class UserService : IUserService
     {
         private readonly IUserRipository _userRepository;
+        private readonly IMapper _mapper;
 
-        public UserService(IUserRipository userRepository)
+        public UserService(IUserRipository userRepository,IMapper mapper)
         {
             _userRepository = userRepository;
+            _mapper = mapper;
         }
-
-        public async Task<List<User>> GetUsers()
+        public async Task<List<UserDTO>> GetUsers()
         {
-            return await _userRepository.GetUsers();
+            List<User> users = await _userRepository.GetUsers();
+            List<UserDTO> usersDTO = _mapper.Map<List<User>, List<UserDTO>>(users);
+            return usersDTO;
         }
-        public async Task<User> GetUserById(int id)
+        public async Task<UserDTO> GetUserById(int id)
         {
-            return await _userRepository.GetUserById(id);
+            User user= await _userRepository.GetUserById(id);
+            UserDTO userDTO = _mapper.Map<User, UserDTO>(user);
+            return userDTO;
         }
-        public async Task<User> AddUser(User user)
+        public async Task<UserDTO> AddUser(User newUser)
         {
-            return await _userRepository.AddUser(user);
+            User user = await _userRepository.AddUser(newUser);
+            UserDTO userDTO = _mapper.Map<User, UserDTO>(user);
+            return userDTO;
         }
-        public async Task<User> LogIn(User user)
+        public async Task<UserLoginDTO> LogIn(User existUser)
         {
-            return await _userRepository.LogIn(user);
+            User user = await _userRepository.LogIn(existUser);
+            UserLoginDTO userLoginDTO = _mapper.Map<User, UserLoginDTO>(user);
+            return userLoginDTO;
         }
         public async Task UpdateUser(int id, User updateUser)
         {
