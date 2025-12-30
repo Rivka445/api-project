@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Tests
 {
-    public class CategoryRepositoryIntegratienTests: IClassFixture<DatabaseFixture>
+    [Collection("Database Collection")]
+    public class CategoryRepositoryIntegratienTests: IClassFixture<DatabaseFixture>, IAsyncLifetime
     {
         private readonly WebApiShopContext _dbContext;
         private readonly CategoryRepository _categoryRepository;
@@ -16,6 +17,25 @@ namespace Tests
         {
             _dbContext = databaseFixture.Context;
             _categoryRepository = new CategoryRepository(_dbContext);
+        }
+        public async Task InitializeAsync()
+        {
+            await ClearDatabase();
+        }
+        public async Task DisposeAsync()
+        {
+            await ClearDatabase();
+        }
+        private async Task ClearDatabase()
+        {
+            _dbContext.ChangeTracker.Clear();
+            // סדר המחיקה קריטי למניעת שגיאות Foreign Key
+            if (_dbContext.OrderItems.Any()) _dbContext.OrderItems.RemoveRange(_dbContext.OrderItems);
+            if (_dbContext.Orders.Any()) _dbContext.Orders.RemoveRange(_dbContext.Orders);
+            if (_dbContext.Products.Any()) _dbContext.Products.RemoveRange(_dbContext.Products);
+            if (_dbContext.Categories.Any()) _dbContext.Categories.RemoveRange(_dbContext.Categories);
+            if (_dbContext.Users.Any()) _dbContext.Users.RemoveRange(_dbContext.Users);
+            _dbContext.SaveChanges();
         }
         [Fact]
         public async Task GetCategories_ReturnsAllCategories()

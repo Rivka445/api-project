@@ -13,6 +13,7 @@ namespace Tests
 {
     public class CategoryRepositoryUnitTesting
     {
+
         [Fact]
         public async Task GetCategories_ReturnsAllCategories()
         {
@@ -39,6 +40,7 @@ namespace Tests
         [Fact]
         public async Task GetCategories_ReturnsEmptyList()
         {
+
             // Arrange
             var mockContext = new Mock<WebApiShopContext>();
             var categoryRepository = new CategoryRepository(mockContext.Object);
@@ -54,5 +56,4 @@ namespace Tests
             Assert.Empty(result);
         }
     }
-
 }

@@ -15,14 +15,24 @@ namespace Repositories
         {
             _webApiShopContext = webApiShopContext;
         }
-        public async Task<List<Product>> GetProducts(string? description, int? minPrice, int? maxPrice,
-            int?[] categoriesId, int? position , int? skip)
-        {
-            return await _webApiShopContext.Products.Include(p => p.Category).ToListAsync();
-        }
         public async Task<Product> GetById(int id)
         {
             return await _webApiShopContext.Products.Include(p => p.Category).FirstOrDefaultAsync(o=>o.Id==id);
+        }
+        public async Task<(List<Product> Items, int TotalCount)> GetProducts(string? description, int? minPrice, int? maxPrice,
+            int[] categoriesId, int position=1, int skip=8)
+        {
+            var query = _webApiShopContext.Products.Where(product =>
+            (description == null ? (true) : (product.Description.Contains(description)))
+            && ((minPrice == null) ? (true) : (product.Price >= minPrice))
+            && ((maxPrice == null) ? (true) : (product.Price <= maxPrice))
+            && ((categoriesId.Count()==0) ? (true) : (categoriesId.Contains(product.CategoryId))))
+            .OrderBy(product => product.Price);
+            Console.WriteLine(query.ToQueryString());
+            List<Product> products = await query.Skip((position - 1) * skip)
+            .Take(skip).Include(product => product.Category).ToListAsync();
+            var total = await query.CountAsync();
+            return (products, total);
         }
     }
 }
