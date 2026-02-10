@@ -1,7 +1,7 @@
-D:\webAPI\WebApiShop\WebApiShop\wwwroot\page2.js
-D:\webAPI\WebApiShop\WebApiShop\wwwroot\script.js
-D:\webAPI\WebApiShop\WebApiShop\wwwroot\home.html
-D:\webAPI\WebApiShop\WebApiShop\wwwroot\page2.html
+C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\git_webApi\WebApiShop\wwwroot\page2.js
+C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\git_webApi\WebApiShop\wwwroot\script.js
+C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\git_webApi\WebApiShop\wwwroot\home.html
+C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\git_webApi\WebApiShop\wwwroot\page2.html
 wwwroot\home.html
 wwwroot\page2.html
 wwwroot\page2.js

@@ -75,7 +75,7 @@
     "Parameters": [
       {
         "Name": "order",
-        "Type": "Entities.Order",
+        "Type": "DTOs.OrderPostDTO",
         "IsRequired": true
       }
     ],

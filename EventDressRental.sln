@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiShop", "WebApiShop\WebApiShop.csproj", "{51EEA669-7255-4272-91D1-1DC27654E101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDressRental", "WebApiShop\EventDressRental.csproj", "{51EEA669-7255-4272-91D1-1DC27654E101}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{F5375257-80D4-4607-AAEF-BF6914606ACF}"
 EndProject

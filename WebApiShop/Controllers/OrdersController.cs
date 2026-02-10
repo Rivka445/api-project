@@ -5,16 +5,18 @@ using DTOs;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace WebApiShop.Controllers
+namespace EventDressRental.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
     {
         private readonly IOrderService _orderService;
+        private readonly IProductService _productService;
 
-        public OrdersController(IOrderService orderService)
+        public OrdersController(IOrderService orderService,IProductService productService)
         {
+            _productService = productService;
             _orderService= orderService;
         }
         // GET: api/<OrdersController>
@@ -26,17 +28,18 @@ namespace WebApiShop.Controllers
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<OrderDTO>> GetId(int id)
+        public async Task<ActionResult<NewOrderDTO>> GetId(int id)
         {
-            OrderDTO order = await _orderService.GetOrderById(id);
-            return order!= null ? Ok(order) : NotFound();
+            NewOrderDTO order = await _orderService.GetOrderById(id);
+            return order != null ? Ok(order) : NotFound();
         }
 
         // POST api/<OrdersController>
         [HttpPost]
-        public async Task<ActionResult<OrderDTO>> Post([FromBody] Order order)
+        public async Task<ActionResult<NewOrderDTO>> Post([FromBody] OrderDTO order)
         {
-            OrderDTO orderr = await _orderService.AddOrder(order);
+             
+            NewOrderDTO orderr = await _orderService.AddOrder(order);
             return CreatedAtAction(nameof(Get), new { Id = orderr.Id }, orderr);
         }
 

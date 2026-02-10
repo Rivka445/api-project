@@ -1,11 +1,11 @@
 ﻿{
    "CodeGenerationMode": 5,
-   "ContextClassName": "WebApiShopContext",
+   "ContextClassName": "EventDressRentalContext",
    "ContextNamespace": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
    "IrregularWords": null,
-   "MinimumProductVersion": "2.6.1248",
+   "MinimumProductVersion": "2.6.1301",
    "ModelNamespace": null,
    "OutputContextPath": null,
    "OutputPath": "Models",
@@ -23,6 +23,18 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[Dresses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Models]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Models_Categories]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Order_Items]",
          "ObjectType": 0
       },
@@ -31,7 +43,7 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Products]",
+         "Name": "[dbo].[RATING]",
          "ObjectType": 0
       },
       {

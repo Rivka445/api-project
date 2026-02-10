@@ -5,18 +5,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly WebApiShopContext _webApiShopContext;
-        public CategoryRepository(WebApiShopContext webApiShopContext)
+        private readonly EventDressRentalContext _eventDressRentalContext;
+        public CategoryRepository(EventDressRentalContext eventDressRentalContext)
         {
-            _webApiShopContext = webApiShopContext;
+            _eventDressRentalContext = eventDressRentalContext;
         }
         public async Task<List<Category>> GetCategories()
         {
-            return await _webApiShopContext.Categories.ToListAsync();
+            return await _eventDressRentalContext.Categories.ToListAsync();
+        }
+        public async Task<Category> AddCategory(Category category)
+        {
+            await _eventDressRentalContext.Categories.AddAsync(category);
+            await _eventDressRentalContext.SaveChangesAsync();
+            return category;
         }
     }
 

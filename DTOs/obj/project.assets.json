@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\webAPI\\WebApiShop\\DTOs\\DTOs.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\DTOs\\DTOs.csproj",
       "projectName": "DTOs",
-      "projectPath": "D:\\webAPI\\WebApiShop\\DTOs\\DTOs.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\DTOs\\DTOs.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "D:\\webAPI\\WebApiShop\\DTOs\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\DTOs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

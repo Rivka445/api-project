@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 namespace DTOs
 {
   public record UserRegisterDTO
-    (
-         [EmailAddress,Required]
-         string Email,
-         string FirstName,
-         string LastName,
-         [Required]
-         string Password
-    );
+  (
+        [Required]
+        string FirstName,
+        [Required]
+        string LastName,
+        [EmailAddress]
+        string Email,
+        [Phone,Required]
+        string Phone,
+        [Required]
+        string Password
+  );
 }

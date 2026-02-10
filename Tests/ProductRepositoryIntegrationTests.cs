@@ -11,7 +11,7 @@ namespace Tests
     public class ProductRepositoryIntegrationTests : IClassFixture<DatabaseFixture>, IAsyncLifetime
     {
         private readonly WebApiShopContext _dbContext;
-        private readonly ProductRepository _productRepository;
+        private readonly ModelRepository _productRepository;
 
         public ProductRepositoryIntegrationTests(DatabaseFixture databaseFixture)
         {

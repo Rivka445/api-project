@@ -7,15 +7,19 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-    public record OrderPostDTO
+    public record NewModelDTO
     (
         [Required]
-        DateOnly Date,
+        string Name,
         [Required]
-        int Sum,
+        string Description,
         [Required]
-        int UserId,
+        string ImgUrl,
         [Required]
-        List<OrderItemDTO> OrderItems
+        int BasePrice,
+        [Required]
+        string Color,
+        [Required]
+        List<CategoryDTO> Categories 
     );
 }

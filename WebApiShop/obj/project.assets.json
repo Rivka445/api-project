@@ -3756,11 +3756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\webAPI\\WebApiShop\\WebApiShop\\WebApiShop.csproj",
-      "projectName": "WebApiShop",
-      "projectPath": "D:\\webAPI\\WebApiShop\\WebApiShop\\WebApiShop.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\WebApiShop\\EventDressRental.csproj",
+      "projectName": "EventDressRental",
+      "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\WebApiShop\\EventDressRental.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "D:\\webAPI\\WebApiShop\\WebApiShop\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\WebApiShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3782,8 +3782,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\webAPI\\WebApiShop\\Services\\Services.csproj": {
-              "projectPath": "D:\\webAPI\\WebApiShop\\Services\\Services.csproj"
+            "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Services\\Services.csproj"
             }
           }
         }

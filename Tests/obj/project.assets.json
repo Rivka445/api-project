@@ -1782,6 +1782,26 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
+      "EventDressRental/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "9.0.11",
+          "NLog.MailKit": "6.0.5",
+          "NLog.Web.AspNetCore": "6.1.0",
+          "Services": "1.0.0",
+          "Swashbuckle.AspNetCore": "9.0.6"
+        },
+        "compile": {
+          "bin/placeholder/EventDressRental.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EventDressRental.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Repositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1811,26 +1831,6 @@
         "runtime": {
           "bin/placeholder/Services.dll": {}
         }
-      },
-      "WebApiShop/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": "9.0.11",
-          "NLog.MailKit": "6.0.5",
-          "NLog.Web.AspNetCore": "6.1.0",
-          "Services": "1.0.0",
-          "Swashbuckle.AspNetCore": "9.0.6"
-        },
-        "compile": {
-          "bin/placeholder/WebApiShop.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WebApiShop.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -4833,6 +4833,11 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
+    "EventDressRental/1.0.0": {
+      "type": "project",
+      "path": "../WebApiShop/EventDressRental.csproj",
+      "msbuildProject": "../WebApiShop/EventDressRental.csproj"
+    },
     "Repositories/1.0.0": {
       "type": "project",
       "path": "../Repositories/Repositories.csproj",
@@ -4842,23 +4847,18 @@
       "type": "project",
       "path": "../Services/Services.csproj",
       "msbuildProject": "../Services/Services.csproj"
-    },
-    "WebApiShop/1.0.0": {
-      "type": "project",
-      "path": "../WebApiShop/WebApiShop.csproj",
-      "msbuildProject": "../WebApiShop/WebApiShop.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "DTOs >= 1.0.0",
       "Entities >= 1.0.0",
+      "EventDressRental >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "Moq >= 4.20.72",
       "Moq.EntityFrameworkCore >= 9.0.0.10",
       "Repositories >= 1.0.0",
       "Services >= 1.0.0",
-      "WebApiShop >= 1.0.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
@@ -4871,11 +4871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\webAPI\\WebApiShop\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "D:\\webAPI\\WebApiShop\\Tests\\Tests.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "D:\\webAPI\\WebApiShop\\Tests\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4897,20 +4897,20 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\webAPI\\WebApiShop\\DTOs\\DTOs.csproj": {
-              "projectPath": "D:\\webAPI\\WebApiShop\\DTOs\\DTOs.csproj"
+            "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\DTOs\\DTOs.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\DTOs\\DTOs.csproj"
             },
-            "D:\\webAPI\\WebApiShop\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\webAPI\\WebApiShop\\Entities\\Entities.csproj"
+            "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Entities\\Entities.csproj"
             },
-            "D:\\webAPI\\WebApiShop\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\webAPI\\WebApiShop\\Repositories\\Repositories.csproj"
+            "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Repositories\\Repositories.csproj"
             },
-            "D:\\webAPI\\WebApiShop\\Services\\Services.csproj": {
-              "projectPath": "D:\\webAPI\\WebApiShop\\Services\\Services.csproj"
+            "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\Services\\Services.csproj"
             },
-            "D:\\webAPI\\WebApiShop\\WebApiShop\\WebApiShop.csproj": {
-              "projectPath": "D:\\webAPI\\WebApiShop\\WebApiShop\\WebApiShop.csproj"
+            "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\WebApiShop\\EventDressRental.csproj": {
+              "projectPath": "C:\\Users\\user1\\Desktop\\ריקי\\שנה ב'\\PROJECT\\Event_dress_rental\\WebApiShop\\EventDressRental.csproj"
             }
           }
         }

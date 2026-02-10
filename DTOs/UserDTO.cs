@@ -11,11 +11,14 @@ namespace DTOs
     (
         [Required]
         int Id,
-        [EmailAddress,Required]
-        string Email,
-        string FirstName ,
-        string LastName ,
         [Required]
+        string FirstName,
+        [Required]
+        string LastName,
+        [EmailAddress]
+        string Email,
+        [Required,Phone]
+        string Phone,
         string Password 
     );  
 }

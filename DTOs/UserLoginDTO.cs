@@ -9,8 +9,10 @@ namespace DTOs
 {
     public record UserLoginDTO
     (
-        [EmailAddress,Required]
-        string Email,
+        [Required]
+        string FirstName,
+        [Required]
+        string LastName,
         [Required]
         string Password
     );

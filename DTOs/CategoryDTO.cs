@@ -10,8 +10,6 @@ namespace DTOs
     public record CategoryDTO
     (
         [Required]
-        int Id,
-        [Required]
         string Name
     );
 }

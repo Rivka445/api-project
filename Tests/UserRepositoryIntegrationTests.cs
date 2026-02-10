@@ -12,7 +12,7 @@ namespace Tests
     public class UserRepositoryIntegrationTests : IClassFixture<DatabaseFixture>, IAsyncLifetime
     {
         private readonly WebApiShopContext _dbContext;
-        private readonly UserRipository _userRepository;
+        private readonly UserRepository _userRepository;
         public UserRepositoryIntegrationTests(DatabaseFixture databaseFixture)
         {
             _dbContext = databaseFixture.Context;

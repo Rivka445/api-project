@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-    public record OrderItemDTO
+    public record NewDressDTO
     (
         [Required]
-        string ProductName,
+        int ModelId,
         [Required]
-        int Quantity
+        string Size,
+        [Required]
+        int Price,
+        string Note
     );
 }

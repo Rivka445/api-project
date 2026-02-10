@@ -13,16 +13,17 @@ namespace Services
     {
         public AutoMapping() 
         {
-            CreateMap<User,UserDTO>();
-            CreateMap<UserDTO, User>();
-            CreateMap<UserLoginDTO,User>();
-            CreateMap<UserRegisterDTO, User>();
-            CreateMap<Category, CategoryDTO>();
-            CreateMap<OrderItem, OrderItemDTO>();
-            CreateMap<OrderItemDTO, OrderItem>();
-            CreateMap<Order, OrderDTO>();
-            CreateMap<OrderPostDTO, Order>();
-            CreateMap<Product, ProductDTO>();
+            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<User, UserLoginDTO>().ReverseMap();
+            CreateMap<User, UserRegisterDTO>().ReverseMap();
+            CreateMap<Category, CategoryDTO>().ReverseMap();
+            CreateMap<OrderItem, NewOrderItemDTO>().ReverseMap();
+            CreateMap<Order, NewOrderDTO>().ReverseMap();
+            CreateMap<Order, OrderDTO>().ReverseMap();
+            CreateMap<Dress, DressDTO>().ReverseMap();
+            CreateMap<Dress, NewDressDTO>().ReverseMap();
+            CreateMap<Model, ModelDTO>().ReverseMap();
+            CreateMap<Model, NewModelDTO>().ReverseMap();
         }
     }
 }
