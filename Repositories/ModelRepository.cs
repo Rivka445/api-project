@@ -15,37 +15,45 @@ namespace Repositories
         {
             _eventDressRentalContext = eventDressRentalContext;
         }
-        public async Task<Model> GetModelById(int id)
+        public async Task<Model?> GetModelById(int id)
         {
-            return await _eventDressRentalContext.Models.FirstOrDefaultAsync(o=>o.Id==id);
+            return await _eventDressRentalContext.Models
+                .FirstOrDefaultAsync(m => m.Id == id && m.IsActive == true);
         }
-        public async Task<List<string>> GetSizesById(int id)
-        {
-            var model = await _eventDressRentalContext.Models.Where(m => m.Id == id).Include(m => m.Dresses).FirstOrDefaultAsync();
-            return model.Dresses.Select(d => d.Size).Distinct().ToList();
-        }
-
         public async Task<(List<Model> Items, int TotalCount)> GetModels(string? description, int? minPrice, int? maxPrice,
             int[] categoriesId, string? color, int position=1, int skip=8)
         {
             var query = _eventDressRentalContext.Models.Where(product =>
-            (description == null ? (true) : (product.Description.Contains(description)))
+            product.IsActive == true
+            &&(description == null ? (true) : (product.Description.Contains(description)))
             && ((minPrice == null) ? (true) : (product.BasePrice >= minPrice))
             && ((maxPrice == null) ? (true) : (product.BasePrice <= maxPrice))
+            && ((color == null) ? (true) : (product.Color == color))
             && ((categoriesId.Count()==0) ? (true) : product.Categories.Any(c => categoriesId.Contains(c.Id))))
             .OrderBy(product => product.BasePrice);
             Console.WriteLine(query.ToQueryString());
             List<Model> products = await query.Skip((position - 1) * skip)
-            .Take(skip).Include(product => product.Categories).ToListAsync();
+            .Take(skip)
+            .Include(product => product.Categories)
+            .ToListAsync();
             var total = await query.CountAsync();
             return (products, total);
         }
-        public async Task<Model> addModel(Model model)
+        public async Task<Model> AddModel(Model model)
         {
             await _eventDressRentalContext.Models.AddAsync(model);
             await _eventDressRentalContext.SaveChangesAsync();
             return model;
         }
-
+        public async Task UpdateModel(Model model)
+        {
+            _eventDressRentalContext.Models.Update(model);
+            await _eventDressRentalContext.SaveChangesAsync();
+        }
+        public async Task DeleteModel(Model model)
+        {
+            _eventDressRentalContext.Models.Update(model);
+            await _eventDressRentalContext.SaveChangesAsync();
+        }
     }
 }

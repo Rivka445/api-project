@@ -25,5 +25,14 @@ namespace Services
             List<CategoryDTO> categoriesDTO = _mapper.Map<List<Category>, List<CategoryDTO>>(categories);
             return categoriesDTO;    
         }
+        public async Task<CategoryDTO> AddCategory(CategoryDTO newCategory)
+        {
+            if (newCategory == null)
+                throw new ArgumentNullException(nameof(newCategory));
+            Category category = _mapper.Map<CategoryDTO ,Category>(newCategory);
+            Category addedCategory = await _categoryRepository.AddCategory(category);
+            CategoryDTO categoryDTO = _mapper.Map<Category, CategoryDTO>(addedCategory);
+            return categoryDTO;
+        }
     }
 }

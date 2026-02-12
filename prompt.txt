@@ -1,5 +1,4 @@
 
-
 תכתוב לי Unit Tasting עבור הקלאס המצורף כוללHappy /Unhappy path:
 
 תכתוב לי IntegratienTests עבור הקלאס המצרף Happy/ Unhappy path עבור הקובץ הבא:

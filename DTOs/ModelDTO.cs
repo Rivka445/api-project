@@ -22,6 +22,8 @@ namespace DTOs
         [Required]
         string Color,
         [Required]
+        bool IsActive,
+        [Required]
         List<CategoryDTO> Categories
     );
 }

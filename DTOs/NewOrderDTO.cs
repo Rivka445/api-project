@@ -19,6 +19,6 @@ namespace DTOs
         [Required]
         int UserId,
         string Note,
-        List<NewOrderItemDTO> OrderItems
+        List<OrderItemDTO> OrderItems
     );
 }

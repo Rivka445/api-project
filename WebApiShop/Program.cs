@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseNLog();
 
 // Add services to the container.
-builder.Services.AddScoped<IUserRipository, UserRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IUserPasswordRipository, UserPasswordRipository>();
@@ -20,8 +20,11 @@ builder.Services.AddScoped<IUserPasswordService, UserPasswordService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
-builder.Services.AddScoped<IProductRepository,  ModelRepository>();
-builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IModelRepository,  ModelRepository>();
+builder.Services.AddScoped<IModelService, ModelService>();
+
+builder.Services.AddScoped<IDressRepository, DressRepository>();
+builder.Services.AddScoped<IDressService, DressService>();
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();

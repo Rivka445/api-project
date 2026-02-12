@@ -9,7 +9,7 @@ namespace DTOs
     public record OrderDTO
     (
         [Required]
-        int OrderId,
+        int Id,
         [Required]
         DateOnly OrderDate,
         [Required]
@@ -18,11 +18,13 @@ namespace DTOs
         int FinalPrice,
         [Required]
         int UserId,
+        string Note,
         [Required]
+        string StatusName,
+         [Required]
         string UserFirstName,
         [Required]
         string UserLasttName,
-        string Note,
         [Required]
         List<DressDTO> OrderItems
     );

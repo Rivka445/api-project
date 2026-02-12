@@ -15,19 +15,46 @@ namespace Repositories
         {
             _eventDressRentalContext = eventDressRentalContext;
         }
-        public async Task<Dress> GetDressById(int id)
+        public async Task<Dress?> GetDressById(int id)
         {
-            return await _eventDressRentalContext.Dresses.FirstOrDefaultAsync(o => o.Id == id);
+            return await _eventDressRentalContext.Dresses
+                .FirstOrDefaultAsync(d => d.Id == id && d.IsActive == true);
         }
-        public async Task<int> GetCountByIdAndSize(int id, string size)
+        public async Task<List<string>> GetSizesByModelId(int modelId)
         {
-            return await _eventDressRentalContext.Dresses.Where(m => m.Id == id && m.Size == size).CountAsync();
+            return await _eventDressRentalContext.Dresses
+                .Where(d => d.IsActive == true && d.ModelId == modelId)
+                .Select(d => d.Size)
+                .Distinct()
+                .ToListAsync();
         }
-        public async Task<Dress> addDress(Dress dress)
+        public async Task<int> GetCountByModelIdAndSizeForDate(int modelId, string size, DateOnly date)
+        {
+            var dressesCount = await _eventDressRentalContext.Dresses
+                .Where(d =>  d.IsActive == true && d.ModelId == modelId && d.Size == size )
+                .Include(d => d.OrderItems)
+                    .ThenInclude(oi => oi.Order)
+                .Where(d => !d.OrderItems.Any(oi =>
+                    oi.Order.EventDate >= date.AddDays(-7) &&
+                    oi.Order.EventDate <= date.AddDays(7)))
+                .CountAsync();
+           return dressesCount;
+        }
+        public async Task<Dress> AddDress(Dress dress)
         {
             await _eventDressRentalContext.Dresses.AddAsync(dress);
             await _eventDressRentalContext.SaveChangesAsync();
             return dress;
+        } 
+        public async Task UpdateDress(Dress dress)
+        {
+            _eventDressRentalContext.Dresses.Update(dress);
+            await _eventDressRentalContext.SaveChangesAsync();
+        }
+        public async Task DeleteDress(Dress dress)
+        {
+            _eventDressRentalContext.Dresses.Update(dress);
+            await _eventDressRentalContext.SaveChangesAsync();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,30 +15,53 @@ namespace Repositories
         {
             _eventDressRentalContext = webApiShopContext;
         }
-        public async Task<Order> GetOrderById(int id)
+        public async Task<Order?> GetOrderById(int id)
         {
-            return await _eventDressRentalContext.Orders.Include(o => o.OrderItems).ThenInclude(oi => oi.Dress).FirstOrDefaultAsync(o=>o.Id==id);
-        }
-        public async Task<List<Order>> GetOrderByUserId(int id)
-        {
-            return await _eventDressRentalContext.Orders.Include(o => o.OrderItems).ThenInclude(oi => oi.Dress)
-                            .Where(o=> o.UserId == id).OrderBy(o => o.OrderDate).ToListAsync();     
-        }
-        public async Task<List<Order>> GetOrdersByDate(DateOnly date)
-        {
-            return await _eventDressRentalContext.Orders.Include(o => o.OrderItems).ThenInclude(oi => oi.Dress)
-                       .Where(o => o.EventDate <= date && o.EventDate > DateOnly.FromDateTime(DateTime.Now)).OrderBy(o => o.OrderDate).ToListAsync();
+            return await _eventDressRentalContext.Orders
+                            .Include(o => o.OrderItems).ThenInclude(o => o.Dress)
+                            .Include(o => o.Status)
+                            .FirstOrDefaultAsync(o => o.Id == id);
         }
         public async Task<List<Order>> GetAllOrders()
         {
-            return await _eventDressRentalContext.Orders.Include(o => o.OrderItems).ToListAsync();
+            return await _eventDressRentalContext.Orders
+                .Include(o => o.OrderItems).ThenInclude(oi => oi.Dress)
+                .Include(o => o.Status)
+                .OrderBy(o => o.OrderDate)
+                .ToListAsync();
         }
-        public async Task<Order> addOrder(Order order)
+        public async Task<List<Order>> GetOrderByUserId(int id)
+        {
+            return await _eventDressRentalContext.Orders
+                            .Include(o => o.OrderItems).ThenInclude(oi => oi.Dress)
+                            .Include(o => o.Status)
+                            .Where(o => o.UserId == id)
+                            .OrderBy(o => o.OrderDate)
+                            .ToListAsync();     
+        }
+        public async Task<List<Order>> GetOrdersByDate(DateOnly date)
+        {
+            return await _eventDressRentalContext.Orders
+                       .Include(o => o.OrderItems).ThenInclude(oi => oi.Dress)
+                       .Where(o => o.EventDate <= date && o.StatusId == 1)
+                       .OrderBy(o => o.OrderDate)
+                       .ToListAsync();
+        }
+        public async Task<Order> AddOrder(Order order)
         {
             await _eventDressRentalContext.Orders.AddAsync(order);
             await _eventDressRentalContext.SaveChangesAsync();
             return order;
         }
-
+        public async Task UpdateOrder(Order order)
+        {
+            _eventDressRentalContext.Orders.Update(order);
+            await _eventDressRentalContext.SaveChangesAsync();
+        }
+        public async Task UpdateStatusOrder(Order order)
+        {
+            _eventDressRentalContext.Orders.Update(order);
+            await _eventDressRentalContext.SaveChangesAsync();
+        }
     }
 }
