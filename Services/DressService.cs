@@ -58,10 +58,25 @@ namespace Services
             return await _dressRepository.IsDressAvailable(id, date);
         }
 
+        public async Task<List<DressDTO>> GetDressesByModelId(int modelId)
+        {
+            List<Dress> dresses = await _dressRepository.GetDressesByModelId(modelId);
+            List<DressDTO> dressesDTO = _mapper.Map<List<Dress>, List<DressDTO>>(dresses);
+            return dressesDTO;
+        }
+
         public async Task<int> GetCountByModelIdAndSizeForDate(int modelId, string size, DateOnly date)
         {
             return await _dressRepository.GetCountByModelIdAndSizeForDate(modelId, size, date);
         }
+        public async Task<DressDTO> GetDressByModelIdAndSize(int modelId, string size)
+        {
+            Dress dress = await _dressRepository.GetDressByModelIdAndSize(modelId, size);
+            if (dress == null) return null;
+            DressDTO dressDTO = _mapper.Map<Dress, DressDTO>(dress);
+            return dressDTO;
+        }
+
         public async Task<DressDTO> AddDress(NewDressDTO newDress)
         {
             Dress addedDress = _mapper.Map<NewDressDTO, Dress>(newDress);

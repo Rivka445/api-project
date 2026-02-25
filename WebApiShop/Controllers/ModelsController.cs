@@ -4,6 +4,7 @@ using Repositories;
 using Services;
 using DTOs;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization; 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -43,6 +44,7 @@ namespace EventDressRental.Controllers
         }
 
         // POST api/<ModelsController>
+        [Authorize(Roles = "Admin")] 
         [HttpPost]
         public async Task<ActionResult<ModelDTO>> AddModel([FromBody] NewModelDTO newModel)
         {
@@ -56,6 +58,7 @@ namespace EventDressRental.Controllers
         }
 
         // PUT api/<ModelsController>/5
+        [Authorize(Roles = "Admin")] 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateModel(int id, [FromBody] NewModelDTO updateModel)
         {
@@ -71,6 +74,7 @@ namespace EventDressRental.Controllers
         }
 
         // DELETE api/<ModelsController>/5
+        [Authorize(Roles = "Admin")] 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

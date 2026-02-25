@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Services;
 using System.Collections.Generic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,6 +25,7 @@ namespace EventDressRental.Controllers
             _userService = userService;
         }
         // GET: api/<OrdersController>
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<List<OrderDTO>>> Get()
         {
@@ -42,6 +44,7 @@ namespace EventDressRental.Controllers
         }
 
         // GET api/<OrdersController>/unpacked
+        [Authorize(Roles = "Admin")]
         [HttpGet("unpacked")]
         public async Task<ActionResult<List<OrderDTO>>> GetUnpackedOrdersUntilDate(DateOnly date) 
         {
@@ -73,14 +76,15 @@ namespace EventDressRental.Controllers
                 return BadRequest("is not valid order");
             if (!await _orderService.checkPrice(newOrder))
                 return BadRequest("not match price");
-            if(!_orderService.checkDate(newOrder.OrderDate ,newOrder.EventDate))
-                return BadRequest("cant match dates");
+            //if(!_orderService.checkDate(newOrder.OrderDate ,newOrder.EventDate))
+            //    return BadRequest("cant match dates");
 
             OrderDTO orderr = await _orderService.AddOrder(newOrder);
             return CreatedAtAction(nameof(Get), new { Id = orderr.Id }, orderr);
         }
 
         // PUT api/<OrdersController>/5
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateOrder(int id, [FromBody] NewOrderDTO updateOrder)
         {
@@ -98,6 +102,7 @@ namespace EventDressRental.Controllers
             return Ok();
         }
         // PUT api/<OrdersController>/status/5
+        [Authorize(Roles = "Admin")]
         [HttpPut("status/{statusId}")]
         public async Task<IActionResult> UpdateStatusOrder([FromBody] OrderDTO orderDto, int statusId)
         {

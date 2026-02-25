@@ -1,8 +1,9 @@
-﻿using Entities;
+﻿using DTOs;
+using Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Repositories;
 using Services;
-using DTOs;
-using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -37,6 +38,7 @@ namespace EventDressRental.Controllers
         }
 
         // POST api/<CategoriesController>
+        [Authorize(Roles = "Admin")] 
         [HttpPost]
         public async Task<ActionResult<CategoryDTO>> AddCategory([FromBody] NewCategoryDTO newCategory)
         {

@@ -110,3 +110,4 @@ C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\EventDressRental.pdb
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\EventDressRental.genruntimeconfig.cache
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\ref\EventDressRental.dll
+C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

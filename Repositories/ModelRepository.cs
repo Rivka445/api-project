@@ -31,7 +31,7 @@ namespace Repositories
         {
             var query = _eventDressRentalContext.Models.Where(product =>
             product.IsActive == true
-            &&(description == null ? (true) : (product.Description.Contains(description)))
+            &&(description == null ? (true) : (product.Name.Contains(description)))
             && ((minPrice == null) ? (true) : (product.BasePrice >= minPrice))
             && ((maxPrice == null) ? (true) : (product.BasePrice <= maxPrice))
             && ((color == null) ? (true) : (product.Color == color))

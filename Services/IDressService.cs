@@ -1,4 +1,5 @@
 ﻿using DTOs;
+using Entities;
 
 namespace Services
 {
@@ -9,6 +10,8 @@ namespace Services
         bool checkPrice(int price);
         Task DeleteDress(int id);
         Task<int> GetPriceById(int id);
+        Task<DressDTO> GetDressByModelIdAndSize(int modelId, string size);
+        Task<List<DressDTO>> GetDressesByModelId(int modelId);
         Task<int> GetCountByModelIdAndSizeForDate(int modelId, string size, DateOnly date);
         Task<DressDTO> GetDressById(int id);
         Task<bool> IsDressAvailable(int id, DateOnly date);

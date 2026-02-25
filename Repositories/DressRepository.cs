@@ -37,6 +37,12 @@ namespace Repositories
                 .Include(d => d.Model)
                 .FirstOrDefaultAsync(d => d.Id == id && d.IsActive == true);
         }
+        public async Task<Dress?> GetDressByModelIdAndSize(int modelId, string size)
+        {
+            return await _eventDressRentalContext.Dresses
+                .Include(d => d.Model)
+                .FirstOrDefaultAsync(d => d.ModelId == modelId && d.Size == size && d.IsActive == true);
+        }
         public async Task<List<string>> GetSizesByModelId(int modelId)
         {
             return await _eventDressRentalContext.Dresses
@@ -51,6 +57,13 @@ namespace Repositories
             .Where(d => d.Id == id)
             .Select(d => d.Price)
             .FirstOrDefaultAsync();
+        }
+        public async Task<List<Dress>> GetDressesByModelId(int modelId)
+        {
+            return await _eventDressRentalContext.Dresses
+                .Include(d => d.Model)
+                .Where(d => d.IsActive == true && d.ModelId == modelId)
+                .ToListAsync();
         }
         public async Task<int> GetCountByModelIdAndSizeForDate(int modelId, string size, DateOnly date)
         {

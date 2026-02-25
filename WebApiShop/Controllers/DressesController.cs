@@ -1,9 +1,12 @@
-﻿using Entities;
+﻿using DTOs;
+using Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repositories;
 using Services;
-using DTOs;
 using System.Collections.Generic;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Authorization; 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -53,8 +56,18 @@ namespace EventDressRental.Controllers
             int count = await _dressService.GetCountByModelIdAndSizeForDate(modelId, size, date);
             return Ok(count);
         }
+        [HttpGet("id")]
+        public async Task<ActionResult<DressDTO>> GetDressByModelIdAndSize(int modelId, string size)
+        {
+            if (await _modelService.GetModelById(modelId) == null)
+                return NotFound(" not founs model with id" + modelId);
+
+            DressDTO dress = await _dressService.GetDressByModelIdAndSize(modelId, size);
+            return dress;
+        }
 
         // POST api/<DressesController>
+        [Authorize(Roles = "Admin")] 
         [HttpPost]
         public async Task<ActionResult<DressDTO>> AddDress([FromBody] NewDressDTO newDress)
         {
@@ -68,6 +81,7 @@ namespace EventDressRental.Controllers
         }
 
         // PUT api/<DressesController>/5
+        [Authorize(Roles = "Admin")] 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDress(int id, [FromBody] NewDressDTO updateDress)
         {
@@ -84,8 +98,19 @@ namespace EventDressRental.Controllers
             await _dressService.UpdateDress(id, updateDress);
             return Ok();
         }
+        // GET api/<DressesController>/model/{modelId}
+        [HttpGet("model/{modelId}")]
+        public async Task<ActionResult<List<DressDTO>>> GetDressesByModelId(int modelId)
+        {
+            if (await _modelService.GetModelById(modelId) == null)
+                return NotFound(" not found model with id" + modelId);
+
+            List<DressDTO> dresses = await _dressService.GetDressesByModelId(modelId);
+            return Ok(dresses);
+        }
 
         // DELETE api/<DressesController>/5
+        [Authorize(Roles = "Admin")] 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
