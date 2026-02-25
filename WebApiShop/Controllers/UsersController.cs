@@ -70,7 +70,7 @@ namespace EventDressRental.Controllers
         // PUT api/<UsersController>/5
         [Authorize]
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] UserDTO updateUser)
+        public async Task<IActionResult> Put(int id, [FromBody] UserRegisterDTO updateUser)
         {
             if (await _userService.IsExistsUserById(id) == false)
                 return NotFound(id);

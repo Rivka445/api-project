@@ -1,20 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Repositories;
-using Services;
-using EventDressRental;
-using Microsoft.Extensions.Configuration;
-using NLog.Web;
+﻿using EventDressRental;
+using EventDressRental.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NLog.Web;
+using Repositories;
+using Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseNLog();
 
-// --- Dependency Injection ---
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
@@ -33,13 +33,14 @@ builder.Services.AddScoped<IDressService, DressService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+builder.Services.AddScoped<IRatingService, RatingService>();
+
 builder.Services.AddScoped<ITokenService, TokenService>();
 
-// --- DbContext ---
 builder.Services.AddDbContext<EventDressRentalContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Home")));
 
-// --- Authentication ---
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -53,13 +54,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// --- AutoMapper ---
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-// --- Controllers ---
 builder.Services.AddControllers();
 
-// --- Swagger ---
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
@@ -92,7 +90,6 @@ builder.Services.AddSwaggerGen(c =>
     c.AddSecurityRequirement(securityRequirement);
 });
 
-// --- CORS ---
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
@@ -106,27 +103,28 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// --- Middleware Order ---
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
 
 app.UseCors("AllowAngularApp");
+app.UseErrorHandling();
+
+app.UseRating();
+
+app.UseStaticFiles();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-// --- Swagger Middleware ---
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-        c.RoutePrefix = ""; // Swagger על '/' או שנה לפי הצורך
+        c.RoutePrefix = ""; 
     });
 }
 
-// --- Map Controllers ---
 app.MapControllers();
 
 app.Run();

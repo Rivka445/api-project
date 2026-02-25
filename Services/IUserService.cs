@@ -9,6 +9,6 @@ namespace Services
         Task<UserDTO> GetUserById(int id);
         Task<List<UserDTO>> GetUsers();
         Task<AuthenticatedUser> LogIn(UserLoginDTO existUser);
-        Task UpdateUser(int id, UserDTO updateUser);
+        Task UpdateUser(int id, UserRegisterDTO updateUser);
     }
 }

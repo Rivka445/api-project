@@ -33,12 +33,6 @@ namespace Services
                 if (!await _categoryService.IsExistsCategoryById(categories[i]))
                     return false;
             }
-
-            //foreach (var category in categories)
-            //{
-            //    if(!await _categoryService.IsExistsCategoryById(category.Id))
-            //        return false;
-            //}
             return true;
         }
         public bool checkPrice(int price)
@@ -60,10 +54,10 @@ namespace Services
             return modelDTO;
         }
         public async Task<FinalModels> GetModelds(string? description, int? minPrice, int? maxPrice,
-            int[] categoriesId, string? color, int position = 1, int skip = 8)
+            int[] categoriesId, string[] colors, int position = 1, int skip = 8)
         {
             (List<Model> Items, int TotalCount) products = await _modelRepository
-                        .GetModels(description, minPrice, maxPrice, categoriesId, color, position, skip);
+                        .GetModels(description, minPrice, maxPrice, categoriesId, colors, position, skip);
             List<ModelDTO> productsDTO = _mapper.Map<List<Model>, List<ModelDTO>>(products.Items);
             bool hasNext = (products.TotalCount - (position * skip)) > 0;
             bool hasPrev = position > 1;

@@ -68,9 +68,9 @@ namespace Services
             return authenticatedUser;
         }
 
-        public async Task UpdateUser(int id, UserDTO updateUser)
+        public async Task UpdateUser(int id, UserRegisterDTO updateUser)
         {
-            User user = _mapper.Map<UserDTO,User>(updateUser);
+            User user = _mapper.Map<UserRegisterDTO, User>(updateUser);
             await _userRepository.UpdateUser(user);
         }
     }

@@ -81,7 +81,9 @@ namespace Repositories
         {
             await _eventDressRentalContext.Dresses.AddAsync(dress);
             await _eventDressRentalContext.SaveChangesAsync();
-            return dress;
+            return await _eventDressRentalContext.Dresses
+              .Include(d => d.Model)
+              .FirstAsync(d => d.Id == dress.Id);
         } 
         public async Task UpdateDress(Dress dress)
         {

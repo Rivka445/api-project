@@ -519,10 +519,13 @@
             }
           },
           {
-            "name": "color",
+            "name": "colors",
             "in": "query",
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -846,46 +849,6 @@
             }
           }
         }
-      },
-      "put": {
-        "tags": [
-          "Orders"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewOrderDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewOrderDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewOrderDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
       }
     },
     "/api/Orders/unpacked": {
@@ -1169,17 +1132,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDTO"
+                "$ref": "#/components/schemas/UserRegisterDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDTO"
+                "$ref": "#/components/schemas/UserRegisterDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDTO"
+                "$ref": "#/components/schemas/UserRegisterDTO"
               }
             }
           }

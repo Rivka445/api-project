@@ -9,8 +9,7 @@ namespace Repositories
         Task<List<Order>> GetAllOrders();
         Task<List<Order>> GetOrderByUserId(int id);
         Task<List<Order>> GetOrdersByDate(DateOnly date);
-        Task<Order> AddOrder(Order order);
-        Task UpdateOrder(Order order);
+        Task<Order?> AddOrder(Order order);
         Task UpdateStatusOrder(Order order);
     }
 }

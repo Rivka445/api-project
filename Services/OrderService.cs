@@ -128,11 +128,6 @@ namespace Services
             OrderDTO orderDTO = _mapper.Map<Order, OrderDTO>(order);
             return orderDTO;
         }
-        public async Task UpdateOrder(NewOrderDTO orderDto, int id)
-        {
-            Order order = _mapper.Map<NewOrderDTO, Order>(orderDto);
-            await _orderRepository.UpdateOrder(order);
-        }
         public async Task UpdateStatusOrder(OrderDTO orderDto, int statusId)
         {
             Order order = _mapper.Map<OrderDTO, Order>(orderDto);
