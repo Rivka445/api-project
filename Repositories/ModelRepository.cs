@@ -31,11 +31,11 @@ namespace Repositories
         {
             var query = _eventDressRentalContext.Models.Where(product =>
             product.IsActive == true
-            &&(description == null ? (true) : (product.Name.Contains(description)))
+            && (description == null || (product.Description != null && product.Description.Contains(description)))
             && ((minPrice == null) ? (true) : (product.BasePrice >= minPrice))
             && ((maxPrice == null) ? (true) : (product.BasePrice <= maxPrice))
-            && (colors.Count() == 0) ? (true) : (colors.Contains(product.Color))
-            && ((categoriesId.Count() == 0) ? (true) : product.Categories.Any(c => categoriesId.Contains(c.Id))))
+            && ((colors.Length == 0) || (product.Color != null && colors.Contains(product.Color)))
+            && ((categoriesId.Length == 0) || (product.Categories != null && product.Categories.Any(c => categoriesId.Contains(c.Id)))))
             .OrderBy(product => product.BasePrice);
             Console.WriteLine(query.ToQueryString());
             List<Model> products = await query.Skip((position - 1) * skip)
@@ -48,9 +48,12 @@ namespace Repositories
         public async Task<Model> AddModel(Model model)
         {
             await _eventDressRentalContext.Models.AddAsync(model);
-            foreach (var category in model.Categories)
+            if (model.Categories != null)
             {
-                _eventDressRentalContext.Entry(category).State = EntityState.Unchanged;
+                foreach (var category in model.Categories)
+                {
+                    _eventDressRentalContext.Entry(category).State = EntityState.Unchanged;
+                }
             }
             await _eventDressRentalContext.SaveChangesAsync();
             return await _eventDressRentalContext.Models
@@ -61,17 +64,29 @@ namespace Repositories
             var existingModel = await _eventDressRentalContext.Models
                 .Include(m => m.Categories)
                 .FirstOrDefaultAsync(m => m.Id == model.Id);
+            if (existingModel == null)
+            {
+                return;
+            }
             existingModel.Name = model.Name;
             existingModel.Description = model.Description;
             existingModel.ImgUrl = model.ImgUrl;
             existingModel.BasePrice = model.BasePrice;
             existingModel.Color = model.Color;
-            existingModel.IsActive = model.IsActive; existingModel.Categories.Clear();
-            foreach (var category in model.Categories)
+            existingModel.IsActive = model.IsActive;
+            existingModel.Categories ??= new List<Category>();
+            existingModel.Categories.Clear();
+            if (model.Categories != null)
             {
-                var existingCategory = await _eventDressRentalContext.Categories
-                    .FindAsync(category.Id);
-                existingModel.Categories.Add(existingCategory);
+                foreach (var category in model.Categories)
+                {
+                    var existingCategory = await _eventDressRentalContext.Categories
+                        .FindAsync(category.Id);
+                    if (existingCategory != null)
+                    {
+                        existingModel.Categories.Add(existingCategory);
+                    }
+                }
             }
             await _eventDressRentalContext.SaveChangesAsync();
         }

@@ -103,7 +103,6 @@ C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\EventDre.2FD0DF88.Up2Date
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\EventDressRental.dll
 C:\Users\user1\Desktop\ריקי\שנה ב'\PROJECT\Event_dress_rental\WebApiShop\obj\Debug\net9.0\refint\EventDressRental.dll
