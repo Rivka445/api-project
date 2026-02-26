@@ -17,6 +17,10 @@ namespace Services
             _mapper = mapper;
             _tokenService = tokenService;
         }
+        public async Task<bool> IsUserExistsByUserName(string firstName, string lastName)
+        {
+            return await _userRepository.IsUserExistsByUserName(firstName, lastName);
+        }
         public async Task<bool> IsExistsUserById(int id)
         {
             return await _userRepository.IsExistsUserById(id);

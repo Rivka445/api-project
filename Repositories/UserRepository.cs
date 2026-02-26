@@ -12,6 +12,11 @@ namespace Repositories
         {
             _eventDressRentalContext = eventDressRentalContext;
         }
+        public async Task<bool> IsUserExistsByUserName(string firstName, string lastName)
+        {
+            return await _eventDressRentalContext.Users
+                .AnyAsync(u => u.FirstName == firstName && u.LastName == lastName );
+        }
         public async Task<bool> IsExistsUserById(int id)
         {
             return await _eventDressRentalContext.Users.AnyAsync(u => u.Id == id);

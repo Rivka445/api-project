@@ -51,6 +51,8 @@ namespace EventDressRental.Controllers
         [HttpPost]
         public async Task<ActionResult<AuthenticatedUser>> AddUser([FromBody] UserRegisterDTO newUser)
         {
+            if (await _userService.IsUserExistsByUserName(newUser.FirstName, newUser.LastName))
+                return BadRequest("User name already exists");
             int passwordScore = _userPasswordService.CheckPassword(newUser.Password);
             if(passwordScore < 2)
                 return BadRequest("Password is not strong enough");
@@ -72,6 +74,8 @@ namespace EventDressRental.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] UserRegisterDTO updateUser)
         {
+            if (await _userService.IsUserExistsByUserName(updateUser.FirstName, updateUser.LastName))
+                return BadRequest("User name already exists");
             if (await _userService.IsExistsUserById(id) == false)
                 return NotFound(id);
             int passwordScore = _userPasswordService.CheckPassword(updateUser.Password);

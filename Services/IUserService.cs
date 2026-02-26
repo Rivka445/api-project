@@ -4,6 +4,7 @@ namespace Services
 {
     public interface IUserService
     {
+        Task<bool> IsUserExistsByUserName(string firstName, string lastName);
         Task<bool> IsExistsUserById(int id);
         Task<AuthenticatedUser> AddUser(UserRegisterDTO user);
         Task<UserDTO> GetUserById(int id);
